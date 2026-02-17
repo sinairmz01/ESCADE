@@ -5,12 +5,13 @@
     --card-bg: rgba(255, 255, 255, 0.05);
     --text-main: #ffffff;
     --text-muted: #a3a3a3;
-    --primary-color: #6366f1;
-    /* Indigo */
-    --primary-hover: #4f46e5;
-    --secondary-color: #ec4899;
-    /* Pink */
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    --primary-color: #10b981;
+    /* Emerald 500 */
+    --primary-hover: #059669;
+    /* Emerald 600 */
+    --secondary-color: #34d399;
+    /* Emerald 400 */
+    --accent-gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
     --glass-border: rgba(255, 255, 255, 0.1);
     --font-main: 'Inter', sans-serif;
     --transition: all 0.3s ease;
