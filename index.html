@@ -48,8 +48,12 @@
             </div>
             <div class="hero-image">
                 <div class="glow-effect"></div>
-                <!-- Placeholder for abstract modern graphic or image -->
-                <i class="fas fa-network-wired hero-icon-large"></i>
+                <!-- Abstract Premium CSS Background -->
+                <div
+                    style="width: 100%; height: 400px; background: radial-gradient(circle at center, rgba(64, 224, 208, 0.2) 0%, transparent 70%); border-radius: 50%; filter: blur(40px); animation: pulse 4s infinite ease-in-out;">
+                </div>
+                <i class="fas fa-network-wired hero-icon-large"
+                    style="position: absolute; color: var(--primary-color);"></i>
             </div>
         </div>
     </header>
@@ -126,34 +130,141 @@
         </div>
     </section>
 
-    <section id="contacto" class="contact section">
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
         <div class="container">
-            <div class="contact-wrapper glass-card">
-                <div class="contact-info">
-                    <h2>Empecemos a Trabajar</h2>
-                    <p>Déjanos tus datos y nos pondremos en contacto para entender tus necesidades de capacitación.</p>
-                    <ul class="contact-list">
-                        <li><i class="fas fa-envelope"></i> contacto@escade.mx</li>
-                        <li><i class="fas fa-phone"></i> +52 (55) 1234 5678</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
-                    </ul>
+            <div class="section-header">
+                <h2 class="section-title">Confían en Nosotros</h2>
+                <p class="section-desc">Organizaciones que han transformado su potencial con ESCADE.</p>
+            </div>
+
+            <div class="testimonial-slider" id="testimonial-slider">
+                <!-- Slides will be injected by JS -->
+            </div>
+
+            <div class="slider-controls" id="slider-controls">
+                <!-- Dots will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact section bg-darker">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Diagnóstico de Necesidades</h2>
+                <p class="section-desc">Cuéntanos qué buscas y te conectaremos con el experto ideal.</p>
+            </div>
+
+            <div class="wizard-container" id="wizard">
+                <div class="wizard-header">
+                    <div class="logo">ESCADE<span class="dot">.</span></div>
+                    <div class="wizard-progress">
+                        <div class="progress-step active" id="p-step-1"></div>
+                        <div class="progress-step" id="p-step-2"></div>
+                        <div class="progress-step" id="p-step-3"></div>
+                    </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" placeholder="Tu nombre o el de tu organización">
+
+                <form class="wizard-body" id="wizard-form">
+                    <!-- Step 1: Organization Type -->
+                    <div class="wizard-step active" data-step="1">
+                        <h3 class="step-title">¿Qué tipo de organización representas?</h3>
+                        <p class="step-subtitle">Para asignarte un especialista en tu sector.</p>
+
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="org_type" value="politica" required>
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-landmark"></i></div>
+                                    <h4>Política</h4>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="org_type" value="privada">
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-building"></i></div>
+                                    <h4>Empresa Privada</h4>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="org_type" value="civil">
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-users"></i></div>
+                                    <h4>Sociedad Civil / ONG</h4>
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com">
+
+                    <!-- Step 2: Goal -->
+                    <div class="wizard-step" data-step="2">
+                        <h3 class="step-title">¿Cuál es el objetivo principal?</h3>
+                        <p class="step-subtitle">Selecciona el área de enfoque.</p>
+
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="liderazgo" required>
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-chess-king"></i></div>
+                                    <h4>Liderazgo</h4>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="estrategia">
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-chart-line"></i></div>
+                                    <h4>Estrategia</h4>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="tecnico">
+                                <div class="option-content">
+                                    <div class="option-icon"><i class="fas fa-tools"></i></div>
+                                    <h4>Habilidades Técnicas</h4>
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">¿Qué necesitas?</label>
-                        <textarea id="message" rows="4"
-                            placeholder="Cuéntanos sobre el tipo de capacitación que buscas"></textarea>
+
+                    <!-- Step 3: Contact Info -->
+                    <div class="wizard-step" data-step="3">
+                        <h3 class="step-title">Tus Datos de Contacto</h3>
+                        <p class="step-subtitle">Te enviaremos propuestas de expertos a tu correo.</p>
+
+                        <div class="form-group">
+                            <label for="w-name">Nombre Completo</label>
+                            <input type="text" id="w-name" name="name" required placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="w-email">Correo Electrónico</label>
+                            <input type="email" id="w-email" name="email" required placeholder="juan@empresa.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="w-details">Detalles Adicionales (Opcional)</label>
+                            <textarea id="w-details" name="details" rows="2"
+                                placeholder="Fecha tentativa, tamaño de audiencia..."></textarea>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div class="wizard-step" id="wizard-success">
+                        <div style="text-align: center; padding: 40px 0;">
+                            <i class="fas fa-check-circle"
+                                style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                            <h3 class="step-title">¡Recibido!</h3>
+                            <p class="step-subtitle">Analizaremos tu solicitud y te contactaremos en breve con los
+                                mejores perfiles.</p>
+                        </div>
+                    </div>
                 </form>
+
+                <div class="wizard-footer" id="wizard-footer">
+                    <button type="button" class="btn-wizard-back" id="prev-btn"
+                        style="visibility: hidden;">Atrás</button>
+                    <button type="button" class="btn btn-primary" id="next-btn">Siguiente</button>
+                    <button type="submit" class="btn btn-primary" id="submit-btn" style="display: none;"
+                        form="wizard-form">Enviar Solicitud</button>
+                </div>
             </div>
         </div>
     </section>
